@@ -12,6 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
+@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection") // disable autowired error
 class MemberRepositoryTest {
 
     @Autowired
