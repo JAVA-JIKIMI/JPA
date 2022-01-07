@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/~/Dev/study/JPA/jpashop #;MVCC=TRUE
+    url: ${db.url} #;MVCC=TRUE
     username: sa
     password:
     driver-class-name: org.h2.Driver
