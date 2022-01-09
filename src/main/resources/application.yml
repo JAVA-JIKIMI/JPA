@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: ${db.url} #;MVCC=TRUE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+#        show_sql: true # system out을 이용하여 로깅
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug # logger를 이용하여 로깅
+    org.hibernate.type: trace
