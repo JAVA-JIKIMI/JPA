@@ -21,7 +21,6 @@ class MemberRepositoryTest {
     @Test
     @Transactional // rollback when used with @Test
     // if need rollback off, use -> @Rollback(value = false)
-    @Rollback(value = false)
     public void testMember() {
         // given
         final Member member = new Member(); // use final
