@@ -1,5 +1,6 @@
 package jpabook.jpashop;
 
+import jpabook.jpashop.domain.Member;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest
-@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection") // disable autowired error
+@SpringBootTest // disable autowired error
 class MemberRepositoryTest {
 
     @Autowired
@@ -24,7 +24,7 @@ class MemberRepositoryTest {
     public void testMember() {
         // given
         final Member member = new Member(); // use final
-        member.setUsername("memberA");
+        member.setName("memberA");
 
         // when
         final long savedId = memberRepository.save(member);
@@ -32,7 +32,7 @@ class MemberRepositoryTest {
 
         // then
         assertThat(findMember.getId()).isEqualTo(member.getId());
-        assertThat(findMember.getUsername()).isEqualTo(member.getUsername());
+        assertThat(findMember.getName()).isEqualTo(member.getName());
         assertThat(findMember).isEqualTo(member); // same persistence context (1st cache)
     }
 
