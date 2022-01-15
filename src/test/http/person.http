@@ -1,0 +1,8 @@
+// insert person
+POST http://localhost:8080/persons/incheol
+Accept: application/json
+
+###
+// select person
+GET http://localhost:8080/persons
+Accept: application/json
