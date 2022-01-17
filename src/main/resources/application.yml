@@ -7,11 +7,11 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     properties:
       hibernate:
 #        show_sql: true # system out을 이용하여 로깅
-        format_sql: true
+        format_sql: false
     
   h2:
     console:
