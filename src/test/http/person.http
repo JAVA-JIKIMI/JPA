@@ -1,5 +1,5 @@
 // insert person
-POST http://localhost:8080/persons/incheol
+POST http://localhost:8080/persons/steve
 Accept: application/json
 
 ###

@@ -18,6 +18,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -40,6 +41,7 @@ public class Person {
 	private String name;
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JsonIgnore
 	private List<Cat> cats = new ArrayList<>();
 
 	public void setCats(List<Cat> cats) {

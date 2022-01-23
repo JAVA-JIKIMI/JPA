@@ -15,6 +15,9 @@ public class PersonController {
 	@Autowired
 	private PersonRepository personRepository;
 	
+	@Autowired
+	private PersonService personService;
+	
 	@PostMapping("{name}")
 	public void save(@PathVariable String name) {
 		Person person = Person.builder().name(name).build();
@@ -24,5 +27,13 @@ public class PersonController {
 	@GetMapping
 	public List<Person> get() {
 		return personRepository.findAll();
+	}
+	
+	@GetMapping("{id}")
+	public String get(@PathVariable long id) {
+		Person person = personService.getId(id);
+		person.setName("test");
+		Person person2 = personService.getId(id);
+		return person.getName();
 	}
 }
