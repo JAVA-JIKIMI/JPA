@@ -1,0 +1,22 @@
+spring:
+#  datasource:
+#    url: jdbc:h2:mem:testdb # in memory mode로 동작
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop # 애플리케이션 종료 시점에 table drop
+#    properties:
+#      hibernate:
+##        show_sql: true # system out을 이용하여 로깅
+#        format_sql: true
+#  h2:
+#    console:
+#      enabled: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug # logger를 이용하여 로깅
+    org.hibernate.type: trace

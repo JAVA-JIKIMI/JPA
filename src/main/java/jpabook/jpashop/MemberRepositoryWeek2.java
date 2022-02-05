@@ -7,7 +7,7 @@ import jpabook.jpashop.domain.Member;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MemberRepository {
+public class MemberRepositoryWeek2 {
 
     @PersistenceContext
     private EntityManager em;
