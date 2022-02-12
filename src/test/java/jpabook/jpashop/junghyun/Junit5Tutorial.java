@@ -135,6 +135,7 @@ public class Junit5Tutorial {
     }
 
     @Test
+    @Disabled
     void exceptionGetMessageTest() {
         String nullString = null;
 
