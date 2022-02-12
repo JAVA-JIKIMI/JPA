@@ -39,6 +39,8 @@ public class Person {
 	private Long id;
 
 	private String name;
+	
+	private String address;
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JsonIgnore
