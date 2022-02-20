@@ -10,7 +10,7 @@ import javax.validation.constraints.NotEmpty;
 public class BookForm {
 
     @NotEmpty(message = "비어있음 안댐")
-    private String id;
+    private long id;
 
     private String name;
     private int price;
